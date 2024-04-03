@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class CameraController : MonoBehaviour
     
     public float scrollSpeed = 5f;
     public float minY = 10f;
-    public float maxY = 80f;
+    public float maxY = 100f;
 
     public void Update()
     {
