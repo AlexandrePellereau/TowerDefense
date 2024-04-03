@@ -9,7 +9,8 @@ public class Node : MonoBehaviour
     public Color hoverColor;
     public Vector3 positionOffset;
     
-    private GameObject turret;
+    [Header("Optional")]
+    public GameObject turret;
     
     private Color startColor;
     private Renderer rend;
@@ -22,6 +23,11 @@ public class Node : MonoBehaviour
         startColor = rend.material.color;
         
         buildManager = BuildManager.instance;
+    }
+    
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
     }
 
     private void OnMouseDown()

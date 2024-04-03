@@ -5602,6 +5602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c597f870a1c5d46a9a1d48f96f79b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 2031335778302686782, guid: c34608b2cf9fa5d4d8b99ad5b3821d93, type: 3}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 2408986801723532154, guid: 02673af92db38344a895d66399bd33ed, type: 3}
+    cost: 250
 --- !u!1001 &782868345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9068,7 +9074,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 775996000}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: PurchaseMissileLauncher
+        m_MethodName: SelectMissileLauncher
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12756,7 +12762,7 @@ GameObject:
   - component: {fileID: 1900975909}
   - component: {fileID: 1900975908}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: WaveCooldown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14004,7 +14010,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 775996000}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: PurchaseStandardTurret
+        m_MethodName: SelectStandardTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
