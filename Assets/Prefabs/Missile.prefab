@@ -99,6 +99,7 @@ MonoBehaviour:
   target: {fileID: 0}
   explosionRadius: 0
   speed: 70
+  damage: 50
   impactEffect: {fileID: 1571837362074852093, guid: f71ee10afb0e21242842a10cb22c4f58, type: 3}
 --- !u!1 &3823451593869855819
 GameObject:
@@ -148,4 +149,5 @@ MonoBehaviour:
   target: {fileID: 0}
   explosionRadius: 8
   speed: 30
-  impactEffect: {fileID: 4834319643155436085, guid: 7ac0b870ade42fe4bbb37496d48e9fd8, type: 3}
+  damage: 50
+  impactEffect: {fileID: 8069875451939077675, guid: 7ac0b870ade42fe4bbb37496d48e9fd8, type: 3}

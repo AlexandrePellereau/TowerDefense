@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public int damage = 50;
     
-    public ParticleSystem impactEffect;
+    public GameObject impactEffect;
     
     public void Seek(Transform _target)
     {
@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
     
     void HitTarget()
     {
-        ParticleSystem effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
+        GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 5f);
         
         if (explosionRadius > 0f)
