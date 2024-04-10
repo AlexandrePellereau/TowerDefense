@@ -20,13 +20,19 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     
     private float countdown = 2f;
-    private int waveNumber = 0;
+    private int waveIndex = 0;
     
     private void Update()
     {
         if (EnemiesAlive > 0)
         {
             return;
+        }
+        
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
         }
         
         if (countdown <= 0f)
@@ -47,7 +53,7 @@ public class WaveSpawner : MonoBehaviour
     {
         PlayerStats.Rounds++;
         
-        Wave wave = waves[waveNumber];
+        Wave wave = waves[waveIndex];
         
         EnemiesAlive = wave.count;
         
@@ -57,13 +63,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.rate);
         }
         
-        waveNumber++;
-        
-        if (waveNumber == waves.Length)
-        {
-            gameManager.WinLevel();
-            this.enabled = false;
-        }
+        waveIndex++;
     }
     
     void SpawnEnemy(GameObject enemyPrefab)
