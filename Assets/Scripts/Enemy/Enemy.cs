@@ -56,6 +56,11 @@ public class Enemy : MonoBehaviour
         
         WaveSpawner.EnemiesAlive--;
         
+        if (WaveSpawner.EnemiesAlive <= 0)
+        {
+            CameraShake.Instance.ShakeCamera();
+        }
+        
         Destroy(gameObject);
     }
 
